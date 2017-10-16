@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.maumx.bitsotrader.Actividades.PlaceOrder">
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="188dp"
+        android:layout_marginTop="226dp"
+        android:text="Comisión por transaccion:"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="188dp"
+        android:layout_marginTop="240dp"
+        android:text="0.0"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblPlaceOrderPorcentajeComision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="239dp"
+        android:text="0.0"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="% Comision:"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtPlaceOrderPrecioOriginal"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/txtPlaceOrderGananciaPerdida"
+        android:layout_width="156dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="188dp"
+        android:layout_marginTop="177dp"
+        android:ems="10"
+        android:hint="ETH"
+        android:inputType="numberDecimal"
+        android:textAlignment="textEnd"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtPlaceOrderPrecioOriginal"
+        android:layout_width="156dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="177dp"
+        android:ems="10"
+        android:hint="ETH"
+        android:inputType="numberDecimal"
+        android:textAlignment="textEnd"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="163dp"
+        android:text="Precio"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="188dp"
+        android:layout_marginTop="163dp"
+        android:text="Ganancia o Pérdida"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="216dp"
+        android:layout_marginTop="0dp"
+        android:onClick="CaluclarOrden"
+        android:text="Último precio"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPlaceOrderMonto" />
+
+    <Button
+        android:id="@+id/btnPlaceOrderMontoDisponible"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="0dp"
+        android:onClick="btnMontoDisponible_onClick"
+        android:text="Monto disponible"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPlaceOrderMonto" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="41dp"
+        android:text="Precio"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/tbnTipoMoneda"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtPlaceOrderPrecio"
+        android:layout_width="156dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="55dp"
+        android:ems="10"
+        android:hint="MXN"
+        android:inputType="numberDecimal"
+        android:textAlignment="textEnd"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toRightOf="@+id/txtPlaceOrderMonto"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtPlaceOrderMonto"
+        android:layout_width="156dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="55dp"
+        android:ems="10"
+        android:hint="ETH"
+        android:inputType="numberDecimal"
+        android:textAlignment="textEnd"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="41dp"
+        android:text="MXN"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/textView11"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/tbnTipoMoneda"
+        android:layout_width="59dp"
+        android:layout_height="27dp"
+        android:layout_marginLeft="62dp"
+        android:layout_marginTop="28dp"
+        android:checked="false"
+        android:text="ToggleButton"
+        android:textOff="MXN"
+        android:textOn="ETH"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/textView10"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="41dp"
+        android:text="Monto"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnEnviarOrden"
+        android:layout_width="89dp"
+        android:layout_height="31dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="455dp"
+        android:onClick="EnviarCompra_Onclick"
+        android:text="Envíar"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="255dp" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="257dp"
+        android:layout_marginTop="269dp"
+        android:onClick="CaluclarOrden"
+        android:text="Calcular"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="138dp"
+        android:text="Total "
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblPlaceOrderTotalMoneda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="0.0"
+        android:textSize="10sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintLeft_toRightOf="@+id/textView12"
+        android:layout_marginTop="19dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlaceOrderMontoDisponible" />
+
+    <TextView
+        android:id="@+id/lblPlaceOrderEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="429dp"
+        android:text="Sin envio"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="254dp" />
+
+    <TextView
+        android:id="@+id/lblPlaceOrderTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

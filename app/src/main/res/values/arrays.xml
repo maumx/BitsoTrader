@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="listaPreferenciasCriptoMoneda">
+        <item name="btc">BTC</item>
+        <item name="eth">ETH</item>
+        <item name="eth">XRP</item>
+
+
+    </string-array>
+    <string-array name="listaPreferenciasCriptoMonedaValores">
+        <item name="btc">btc_mxn</item>
+        <item name="eth">eth_mxn</item>
+        <item name="eth">xrp_mxn</item>
+
+    </string-array>
+</resources>

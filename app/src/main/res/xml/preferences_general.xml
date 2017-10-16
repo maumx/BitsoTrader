@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference android:title="Bitso Key"
+        android:key="bitsoKey"
+        android:defaultValue="0"
+        android:summary="BITSO KEY API"/>
+
+    <EditTextPreference android:title="Bitso Secret"
+        android:key="bitsoSecret"
+        android:defaultValue="0"
+        android:summary="BITSO KEY API"/>
+    <ListPreference
+        android:title="Libro"
+        android:key="bitsoBook"
+        android:summary="%s"
+        android:entries="@array/listaPreferenciasCriptoMoneda"
+        android:entryValues="@array/listaPreferenciasCriptoMonedaValores"
+        />
+
+
+</PreferenceScreen>
